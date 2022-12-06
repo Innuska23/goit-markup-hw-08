@@ -1,0 +1,104 @@
+.brands {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        // flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+    }
+
+    &__item {
+        flex-wrap: wrap;
+        flex-direction: row;
+        flex-basis: calc((100% - 30px) / 2);
+        width: 170px;
+        height: 92px;
+        border-radius: 4px;
+        color: #afb1b8;
+        @media screen and (min-width: 768px) {
+                flex-basis: calc((100% - 60px) / 3);
+            }
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 150px) / 6);
+        }
+        // @include basis (1, 2);
+            
+        // @media screen and (min-width: 768px) {
+        //     @include basis (2, 3);
+        // }
+            
+        // @media screen and (min-width: 1200px) {
+        //     @include basis (5, 6);
+        // }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #afb1b8;
+        border-radius: 4px;
+        color: #afb1b8;
+        height: 92px;
+        fill: currentColor;
+        transition-property: border, color;
+        transition-duration: var(--time);
+        transition-timing-function: var(--timing-function-hover);
+
+        &:hover,
+        &:focus {
+            color: var(--color-blue);
+            border-color: var(--color-blue);
+        }
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+}
+// .brands__list {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 30px;
+// }
+
+// .brands__item {
+//     flex-basis: calc((100% - 150px) / 6);
+//     width: 170px;
+//     height: 92px;
+//     border-radius: 4px;
+//     color: #afb1b8;
+// }
+
+// .brands__link {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border: 1px solid #afb1b8;
+//     border-radius: 4px;
+//     color: #afb1b8;
+//     height: 92px;
+//     fill: currentColor;
+//     transition-property: border, color;
+//     transition-duration: var(--time);
+//     transition-timing-function: var(--timing-function-hover);
+//     &:hover,
+//     &:focus {
+//             color: var(--color-blue);
+//             border-color: var(--color-blue);
+//         }
+// }
+
+// .brands__icon {
+//     fill: currentColor;
+// }
+
+// .brands__link:hover,
+// .brands__link:focus {
+//     color: var(--color-blue);
+//     border-color: var(--color-blue);
+// }
+
