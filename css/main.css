@@ -569,7 +569,7 @@ img {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/bg-hero.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-hero.jpg");
   background-position: center;
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-color: var(--color-hero-background);
 }
@@ -946,17 +946,78 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    gap: 0px;
+  }
 }
 
 .contacts__logo {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__logo {
+    margin-bottom: 20px;
+    margin-right: 70px;
+    text-align: left;
+  }
+}
+
+.contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 1170px) {
+  .contacts__list {
+    display: block;
+  }
 }
 
 .contacts__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 768px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .address {
@@ -974,8 +1035,11 @@ img {
   color: var(--color-blue);
 }
 
-.social {
-  margin-left: 70px;
+@media screen and (min-width: 1200px) {
+  .social {
+    margin-right: auto;
+    margin-left: 70px;
+  }
 }
 
 .social__text {
@@ -986,6 +1050,12 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .social__text {
+    text-align: left;
+  }
 }
 
 .social__list {
@@ -1033,10 +1103,12 @@ img {
   fill: currentColor;
 }
 
-.sign-up__form {
-  margin-left: 93px;
-  margin-bottom: 0;
-  margin-right: 0;
+@media screen and (min-width: 1200px) {
+  .sign-up__form {
+    margin-left: 94px;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
 }
 
 .sign-up__title {
@@ -1049,21 +1121,54 @@ img {
   line-height: 1, 14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .sign-up__title {
+    text-align: left;
+  }
 }
 
 .sign-up__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 60px;
+}
+@media screen and (min-width: 768px) {
+  .sign-up__row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sign-up__row {
+    gap: 0px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .sign-up__email {
-  padding-left: 16px;
-  min-width: 358px;
+  padding: 15px 16px;
+  min-width: 450px;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1082,6 +1187,16 @@ img {
 }
 .sign-up__email:focus {
   outline: 1px solid var(--color-blue);
+}
+@media screen and (min-width: 1200px) {
+  .sign-up__email {
+    min-width: 358px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sign-up__email {
+    min-width: 290px;
+  }
 }
 
 .sign-up__button {

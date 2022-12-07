@@ -5,15 +5,51 @@
 
 .footer__container {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 60px;
+    
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        gap: 0px;
+    }
 }
 
 .contacts__logo {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
+    text-align: center;
+        
+    @media screen and (min-width:1200px) {
+        margin-bottom: 20px;
+        margin-right: 70px;
+        text-align: left;
+    }
+}
+
+.contacts__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media screen and (min-width:1170px) {
+        display: block;
+    }
 }
 
 .contacts__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @media screen and(min-width: 768px) {
+            margin-bottom: 12px;
+        }
+    @media screen and(min-width: 1200px) {
+        margin-bottom: 9px;
+    }
 }
 
 .address {
@@ -37,7 +73,11 @@
 
 
 .social {
-    margin-left: 70px;
+    // margin-left: 70px;
+    @media screen and (min-width: 1200px) {
+        margin-right: auto;
+        margin-left: 70px;
+        }
 }
 
 .social__text {
@@ -49,6 +89,10 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+    }
 }
 
 .social__list {
@@ -90,9 +134,11 @@
 }
 
 .sign-up__form {
-    margin-left: 93px;
-    margin-bottom: 0;
-    margin-right: 0;
+    @media screen and (min-width: 1200px) {
+        margin-left: 94px;
+        margin-bottom: 0;
+        margin-right: 0;
+    }  
 }
 
 .sign-up__title {
@@ -105,18 +151,40 @@
     line-height: 1, 14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-align: center;
 
     color: #ffffff;
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+    }
 }
 
 .sign-up__row {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 60px;
+    // gap: 20px;
+            @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                    align-items: baseline;
+                    justify-content: space-around;
+                }
+            
+                @media screen and (min-width: 1200px) {
+                    gap: 0px;
+                    flex-wrap: nowrap;
+                }
 }
+    // @media screen and (min-width: 1200px) {
+    // gap: 12px;
+    // flex-direction: row;
+    // }
 
 .sign-up__email {
-    padding-left: 16px;
-    min-width: 358px;
+    padding: 15px 16px;
+    min-width: 450px;
     height: 50px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -132,8 +200,15 @@
         &:focus {
             outline: 1px solid var(--color-blue);
         }
-}
 
+    @media screen and (min-width: 1200px) {
+        min-width: 358px;
+    }
+    
+    @media screen and (max-width: 480px) {
+    min-width: 290px;
+    }
+}
 // .sign-up__email:focus {
 //     outline: 1px solid var(--color-blue);
 // }
