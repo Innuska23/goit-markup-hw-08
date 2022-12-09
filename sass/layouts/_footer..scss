@@ -133,6 +133,12 @@
     fill: currentColor;
 }
 
+.sign-up{
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+    justify-content: center;
+    }
+}
+
 .sign-up__form {
     @media screen and (min-width: 1200px) {
         margin-left: 94px;
@@ -143,12 +149,12 @@
 
 .sign-up__title {
     display: block;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 1, 14;
+    line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-align: center;
@@ -156,6 +162,7 @@
     color: #ffffff;
     @media screen and (min-width: 1200px) {
         text-align: left;
+        margin-bottom: 20px;
     }
 }
 
@@ -164,17 +171,19 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    gap: 60px;
+    gap: 20px;
     // gap: 20px;
             @media screen and (min-width: 768px) {
-                    flex-direction: row;
-                    align-items: baseline;
-                    justify-content: space-around;
+                    flex-direction: column;
+                    // align-items: baseline;
+                    justify-content: center;
+                    // gap:20px;
                 }
             
                 @media screen and (min-width: 1200px) {
                     gap: 0px;
                     flex-wrap: nowrap;
+                    flex-direction: row;
                 }
 }
     // @media screen and (min-width: 1200px) {
@@ -205,9 +214,9 @@
         min-width: 358px;
     }
     
-    @media screen and (max-width: 480px) {
-    min-width: 290px;
-    }
+    // @media screen and (max-width: 480px) {
+    // min-width: 290px;
+    // }
 }
 // .sign-up__email:focus {
 //     outline: 1px solid var(--color-blue);
