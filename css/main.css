@@ -152,9 +152,8 @@ img {
   min-height: 581px;
   background-color: var(--color-white);
   border-radius: 5px;
-  top: 50%;
-  left: 50%;
   opacity: 1;
+  z-index: 101;
   overflow: auto;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
@@ -181,8 +180,8 @@ img {
 }
 @media screen and (min-height: 580px) {
   .modal {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) scale(1.5);
+            transform: translate(-50%, -50%) scale(1.5);
   }
 }
 @media screen and (min-width: 480px) {
@@ -497,6 +496,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 60px;
   width: 100%;
   z-index: 101;
@@ -583,6 +585,17 @@ img {
 .main-nav__list .main-nav__title:hover, .main-nav__list .main-nav__title:focus {
   color: var(--color-blue);
 }
+@media screen and (max-width: 768px) {
+  .main-nav__list .main-nav__title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
 @media screen and (min-width: 768px) {
   .main-nav__list .main-nav__title {
     padding: 32px 0;
@@ -606,6 +619,8 @@ img {
           flex-direction: column;
   gap: 32px;
   margin-bottom: 64px;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
 }
 @media screen and (min-width: 768px) {
   .contacts-list {
@@ -639,7 +654,40 @@ img {
   }
 }
 
-.contacts-list .phone,
+.contacts-list .phone {
+  color: var(--title-item);
+  font-weight: var(--fw-500);
+  line-height: 1.1428;
+  letter-spacing: 0.02em;
+  vertical-align: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 34px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: var(--time);
+          transition-duration: var(--time);
+  -webkit-transition-timing-function: var(--timing-function-hover);
+          transition-timing-function: var(--timing-function-hover);
+}
+.contacts-list .phone:hover, .contacts-list .phone:focus {
+  color: var(--color-blue);
+}
+@media screen and (min-width: 768px) {
+  .contacts-list .phone {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts-list .phone {
+    font-size: 14px;
+  }
+}
+
 .contacts-list .email {
   color: var(--title-item);
   font-weight: var(--fw-500);
@@ -652,7 +700,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 12px;
+  font-size: 24px;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: var(--time);
@@ -660,14 +708,16 @@ img {
   -webkit-transition-timing-function: var(--timing-function-hover);
           transition-timing-function: var(--timing-function-hover);
 }
-.contacts-list .phone:hover, .contacts-list .phone:focus,
-.contacts-list .email:hover,
-.contacts-list .email:focus {
+.contacts-list .email:hover, .contacts-list .email:focus {
   color: var(--color-blue);
 }
 @media screen and (min-width: 768px) {
-  .contacts-list .phone,
-.contacts-list .email {
+  .contacts-list .email {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts-list .email {
     font-size: 14px;
   }
 }
@@ -675,27 +725,28 @@ img {
 .main-nav__title--current {
   position: relative;
 }
-.main-nav__title--current::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  left: 0;
-  bottom: 0;
-  -webkit-transform: scaleX(1.1);
-          transform: scaleX(1.1);
-  background: var(--color-blue);
-  border-radius: 2px;
-}
-.main-nav__list .main-nav__item .main-nav__title--current {
-  color: var(--color-blue);
+@media screen and (min-width: 768px) {
+  .main-nav__title--current::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    -webkit-transform: scaleX(1.1);
+            transform: scaleX(1.1);
+    background: var(--color-blue);
+    border-radius: 2px;
+  }
+  .main-nav__list .main-nav__item .main-nav__title--current {
+    color: var(--color-blue);
+  }
 }
 
-.phone,
-.email {
+.phone {
   font-weight: 500;
   letter-spacing: 0.02em;
-  font-size: 12px;
+  font-size: 34px;
   line-height: 1.16;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
@@ -706,14 +757,51 @@ img {
   -webkit-transition-timing-function: var(--timing-function-hover);
           transition-timing-function: var(--timing-function-hover);
 }
-.phone:hover, .phone:focus,
-.email:hover,
-.email:focus {
+.phone:hover, .phone:focus {
   color: var(--color-blue);
 }
+@media screen and (min-width: 768px) {
+  .phone {
+    font-size: 12px;
+  }
+}
 @media screen and (min-width: 1200px) {
-  .phone,
+  .phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 1.7143;
+    font-size: 14px;
+  }
+}
+
 .email {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 24px;
+  line-height: 1.16;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: var(--time);
+          transition-duration: var(--time);
+  -webkit-transition-timing-function: var(--timing-function-hover);
+          transition-timing-function: var(--timing-function-hover);
+}
+.email:hover, .email:focus {
+  color: var(--color-blue);
+}
+@media screen and (min-width: 768px) {
+  .email {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .email {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -781,6 +869,7 @@ img {
           justify-content: center;
   background-color: transparent;
   color: black;
+  border: none;
 }
 .header-nav__button:hover, .header-nav__button:focus {
   color: var(--color-blue);

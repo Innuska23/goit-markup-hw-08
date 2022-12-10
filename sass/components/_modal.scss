@@ -22,9 +22,8 @@
     min-height: 581px;
     background-color: var(--color-white);
     border-radius: 5px;
-    top: 50%;
-    left: 50%;
     opacity: 1;
+    z-index: 101;
     overflow: auto;
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--time) var(--timing-function-hover),
@@ -41,7 +40,7 @@
         }
             
         @media screen and (min-height: 580px) {
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) scale(1.5);
         }
             
         @media screen and (min-width: 480px) {
