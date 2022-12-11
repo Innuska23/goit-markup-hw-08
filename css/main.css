@@ -129,8 +129,9 @@ img {
   position: fixed;
   z-index: 1000;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity var(--time) linear, visibility var(--time) linear;
   transition: opacity var(--time) linear, visibility var(--time) linear;
@@ -150,12 +151,11 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: 90%;
   min-height: 581px;
   background-color: var(--color-white);
   border-radius: 5px;
   opacity: 1;
-  z-index: 101;
   overflow: auto;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
@@ -184,11 +184,6 @@ img {
   .modal {
     -webkit-transform: translate(-50%, -50%) scale(1.5);
             transform: translate(-50%, -50%) scale(1.5);
-  }
-}
-@media screen and (min-width: 320px) {
-  .modal {
-    width: 300px;
   }
 }
 @media screen and (min-width: 480px) {
@@ -407,7 +402,11 @@ img {
   font-size: 12px;
   line-height: 1.7143;
   letter-spacing: 0.03em;
-  white-space: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .checkbox-field__text {
+    white-space: nowrap;
+  }
 }
 @media screen and (min-width: 1200px) {
   .checkbox-field__text {
