@@ -1,9 +1,10 @@
 .container {
     width: 100%;
+    // min-width: 100%;
     // width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
-    margin: 0 auto;
+    margin: auto;
     @media screen and (min-width: 480px) {
     max-width: 480px; 
     }

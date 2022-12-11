@@ -60,7 +60,7 @@
               </li>
             </ul>
 
-            <ul class="contacts-list list">
+            <ul class="contacts-list list menu-list">
               <li class="contacts-list__item">
                 <a href="mailto:info@devstudio.com" class="email">
                   <svg width="16" height="12" class="email__icon">
@@ -69,7 +69,7 @@
                   info@devstudio.com
                 </a>
               </li>
-              <li class="contacts-list__item">
+              <li class="contacts-list__item phone-menu">
                 <a href="tel:+380961111111" class="phone">
                   <svg width="10" height="16" class="phone__icon">
                     <use href="./images/icons.svg#icon-smartphone"></use>
@@ -164,15 +164,78 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="list work__list">
             <li class="work__list-item">
-              <img src="./images/img1.jpg" width="370" alt="написання коду" />
+              <picture>
+                <source
+                  media="(min-width: 1170px)"
+                  srcset="
+                    ./images/img1.webp    1x,
+                    ./images/img1-2x.webp 2x,
+                    ./images/img1-3x.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="team-list__img"
+                  srcset="
+                    ./images/img1.jpg    1x,
+                    ./images/img1-2x.jpg 2x,
+                    ./images/img1-3x.jpg 3x
+                  "
+                  src="./images/img1.jpg"
+                  width="370"
+                  alt="написання коду"
+                />
+              </picture>
               <p class="work__list-text">Десктопні додатки</p>
             </li>
             <li class="work__list-item">
-              <img src="./images/img2.jpg" width="370" alt="мобільні додатки" />
+              <picture>
+                <source
+                  media="(min-width: 1170px)"
+                  srcset="
+                    ./images/img2.webp    1x,
+                    ./images/img2-2x.webp 2x,
+                    ./images/img2-3x.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="team-list__img"
+                  srcset="
+                    ./images/img2.jpg    1x,
+                    ./images/img2-2x.jpg 2x,
+                    ./images/img2-3x.jpg 3x
+                  "
+                  src="./images/img2.jpg"
+                  width="370"
+                  alt="мобільні додатки"
+                />
+              </picture>
               <p class="work__list-text">Мобільні додатки</p>
             </li>
             <li class="work__list-item">
-              <img src="./images/img3.jpg" width="370" alt="вибір кольору" />
+              <picture>
+                <source
+                  media="(min-width: 1170px)"
+                  srcset="
+                    ./images/img3.webp    1x,
+                    ./images/img3-2x.webp 2x,
+                    ./images/img3-3x.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="team-list__img"
+                  srcset="
+                    ./images/img3.jpg    1x,
+                    ./images/img3-2x.jpg 2x,
+                    ./images/img3-3x.jpg 3x
+                  "
+                  src="./images/img3.jpg"
+                  width="370"
+                  alt="вибір кольору"
+                />
+              </picture>
               <p class="work__list-text">Дизайнерські рішення</p>
             </li>
           </ul>
@@ -184,7 +247,65 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="list team__list">
             <li class="team__item">
-              <img src="./images/igor.jpg" width="270" alt="Ігор Дем'яненко" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/igor-270w.webp    1x,
+                    ./images/igor-2x-270w.webp 2x,
+                    ./images/igor-3x-270w.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/igor-270w.jpg    1x,
+                    ./images/igor-2x-270w.jpg 2x,
+                    ./images/igor-3x-270w.jpg 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/igor-354w.webp    1x,
+                    ./images/igor-2x-354w.webp 2x,
+                    ./images/igor-3x-354w.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/igor-354w.jpg    1x,
+                    ./images/igor-2х-354w.jpg 2x,
+                    ./images/igor-3х-354w.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/igor-450w.webp    1x,
+                    ./images/igor-2x-450w.webp 2x,
+                    ./images/igor-3x-450w.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/igor-450w.jpg    1x,
+                    ./images/igor-2x-450w.jpg 2x,
+                    ./images/igor-3x-450w.jpg 3x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="./images/igor-450w.webp"
+                  width="450"
+                  alt="Ігор Дем'яненко"
+                />
+              </picture>
               <div class="team__border">
                 <h3 class="team__title">Ігор Дем'яненко</h3>
                 <p lang="en" class="team__job-title">Product Designer</p>
@@ -221,7 +342,65 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/olga.jpg" width="270" alt="Ольга Рєпіна" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/olga-270w.webp    1x,
+                    ./images/olga-2х-270w.webp 2x,
+                    ./images/olga-3х-270w.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/olga-270w.jpg    1x,
+                    ./images/olga-2х-270w.jpg 2x,
+                    ./images/olga-3х-270w.jpg 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/olga-354w.webp    1x,
+                    ./images/olga-2x-354w.webp 2x,
+                    ./images/olga-3x-354w.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/olga-354w.jpg    1x,
+                    ./images/olga-2х-354w.jpg 2x,
+                    ./images/olga-3х-354w.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/olga-450w.webp    1x,
+                    ./images/olga-2x-450w.webp 2x,
+                    ./images/olga-3x-450w.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/olga-450w.jpg    1x,
+                    ./images/olga-2x-450w.jpg 2x,
+                    ./images/olga-3x-450w.jpg 3x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="./images/olga-450w.webp"
+                  width="450"
+                  alt="Ольга Рєпіна"
+                />
+              </picture>
               <div class="team__border">
                 <h3 class="team__title">Ольга Рєпіна</h3>
                 <p lang="en" class="team__job-title">Frontend Developer</p>
@@ -258,7 +437,65 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/mykola.jpg" width="270" alt="Микола Тарасов" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mykola-270w.webp    1x,
+                    ./images/mykola-2x-270w.webp 2x,
+                    ./images/mykola-3x-270w.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykola-270w.jpg    1x,
+                    ./images/mykola-2x-270w.jpg 2x,
+                    ./images/mykola-3x-270w.jpg 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykola-354w.webp    1x,
+                    ./images/mykola-2x-354w.webp 2x,
+                    ./images/mykola-3x-354w.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykola-354w.jpg    1x,
+                    ./images/mykola-2х-354w.jpg 2x,
+                    ./images/mykola-3х-354w.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mykola-450w.webp    1x,
+                    ./images/mykola-2x-450w.webp 2x,
+                    ./images/mykola-3x-450w.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mykola-450w.jpg    1x,
+                    ./images/mykola-2x-450w.jpg 2x,
+                    ./images/mykola-3x-450w.jpg 3x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="./images/mykola-450w.webp"
+                  width="450"
+                  alt="Микола Тарасов"
+                />
+              </picture>
               <div class="team__border">
                 <h3 class="team__title">Микола Тарасов</h3>
                 <p lang="en" class="team__job-title">Marketing</p>
@@ -295,11 +532,65 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/mychailo.jpg"
-                width="270"
-                alt="Михайло Єрмаков"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/mychailo-270w.webp    1x,
+                    ./images/mychailo-2x-270w.webp 2x,
+                    ./images/mychailo-3х-270w.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mychailo-270w.jpg    1x,
+                    ./images/mychailo-2x-270w.jpg 2x,
+                    ./images/mychailo-3x-270w.jpg 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/mychailo-354w.webp    1x,
+                    ./images/mychailo-2x-354w.webp 2x,
+                    ./images/mychailo-3x-354w.webp 3x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mychailo-354w.jpg    1x,
+                    ./images/mychailo-2х-354w.jpg 2x,
+                    ./images/mychailo-3х-354w.jpg 3x
+                  "
+                  type="image/jpg"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mychailo-450w.webp    1x,
+                    ./images/mychailo-2x-450w.webp 2x,
+                    ./images/mychailo-3x-450w.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mychailo-450w.jpg    1x,
+                    ./images/mychailo-2x-450w.jpg 2x,
+                    ./images/mychailo-3x-450w.jpg 3x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="./images/mychailo-450w.webp"
+                  width="450"
+                  alt="Михайло Єрмаков"
+                />
+              </picture>
               <div class="team__border">
                 <h3 class="team__title">Михайло Єрмаков</h3>
                 <p lang="en" class="team__job-title">UI Designer</p>
