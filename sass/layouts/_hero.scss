@@ -1,9 +1,15 @@
+.main{
+    padding-top: 60px;
+    @media screen and (min-width:768px){
+        padding-top: 81px;
+    }
+}
 .hero {
     max-width: 1600px;
-    height: 600px;
+    height: 400px;
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(to right,
@@ -108,8 +114,10 @@
 
     @media screen and (min-width: 1200px) {
         padding: 200px 0;
-        margin-top: 80px;
-    }
+        height: 600px;
+    //     margin-top: 80px;
+    // }
+}
 }
 }
 
@@ -120,7 +128,8 @@
     line-height: 1.3636;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    // width: 696px;
+    width: 360px;
+    height: 84px;
     margin: 0 auto;
     @media screen and (min-width: 768px) {
             width: 360px;
@@ -128,6 +137,7 @@
     @media screen and (min-width: 1200px) {
     font-size: 44px;
     width: 696px;
+    height: 120px;
     }
 }
 
