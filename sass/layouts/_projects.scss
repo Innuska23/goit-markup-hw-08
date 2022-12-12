@@ -74,16 +74,20 @@
     border-right: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     border-left: 1px solid var(--border);
-    @media screen and (min-width:768px) and (max-width:1200px){
-        height: 146px;
-    }}
+    // @media screen and (min-width:768px) and (max-width:1200px){
+    //     height: 146px;
+    // }
+}
 
 .projects__name {
     font-weight: var(--fw-700);
-    font-size: 18px;
+    font-size: 16px;
     line-height: 2;
     letter-spacing: 0.06em;
     margin-bottom: 4px;
+    @media screen and (min-width:1200px){
+        font-size: 18px;
+    }
 }
 
 .projects__example {
