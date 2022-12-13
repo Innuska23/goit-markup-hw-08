@@ -1659,7 +1659,6 @@ img {
 
 @media screen and (min-width: 1200px) {
   .social {
-    margin-right: auto;
     margin-left: 70px;
   }
 }
@@ -1823,6 +1822,11 @@ img {
 @media screen and (min-width: 480px) {
   .sign-up__email {
     width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sign-up__email {
+    width: 358px;
   }
 }
 
